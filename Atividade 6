@@ -1,0 +1,20 @@
+//Rota com 3 pessoas
+
+const express = require('express');
+const app = express();
+
+// Defina uma rota que retorne a lista de pessoas
+app.get('/pessoas', (req, res) => {
+  const pessoas = [
+    { nome: 'Maria', idade: 25, profissao: 'Engenheira' },
+    { nome: 'João', idade: 30, profissao: 'Advogado' },
+    { nome: 'Ana', idade: 40, profissao: 'Médica' }
+  ];
+
+  res.json(pessoas);
+});
+
+// Inicie o servidor na porta 3000
+app.listen(3000, () => {
+  console.log('Servidor iniciado na porta 3000');
+});
